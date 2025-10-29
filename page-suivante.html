@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MANOLO BOT PANEL</title>
+
+  <!-- Google Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Nosifer&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: radial-gradient(circle at center, #000000, #1a0000);
+      color: #ff0000;
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(255, 0, 0, 0.15);
+      border-bottom: 2px solid #ff0000;
+      text-align: center;
+      padding: 16px;
+      text-shadow: 0 0 12px red;
+      font-family: 'Nosifer', cursive;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid #ff0000;
+      border-radius: 16px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+    }
+
+    .card i {
+      font-size: 45px;
+      margin-bottom: 12px;
+      color: #ff0000;
+      text-shadow: 0 0 8px #ff0000;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: white;
+      font-size: 20px;
+    }
+
+    .card button {
+      padding: 10px 20px;
+      background: linear-gradient(45deg, #ff0000, #660000);
+      border: none;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.2s;
+    }
+    .card button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px red;
+    }
+
+    footer {
+      text-align: center;
+      padding: 16px;
+      border-top: 1px solid #ff0000;
+      color: #ff6666;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    ⚡ PANEL BOT MANOLO ⚡
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <i class="fas fa-robot"></i>
+      <h3>Activer le Bot</h3>
+      <button onclick="activateBot()">Démarrer</button>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-terminal"></i>
+      <h3>Console Commandes</h3>
+      <button onclick="openConsole()">Ouvrir</button>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-database"></i>
+      <h3>Base de données</h3>
+      <button onclick="showDB()">Afficher</button>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-cogs"></i>
+      <h3>Paramètres du Bot</h3>
+      <button onclick="settings()">Configurer</button>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-power-off"></i>
+      <h3>Déconnexion</h3>
+      <button onclick="logout()">Quitter</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 — Created by <b>MANOLO</b> | <a href="https://whatsapp.com/channel/0029VaZJgp93bbV7VsgPn60Y" target="_blank" style="color:#ff0000;">Chaîne WhatsApp</a>
+  </footer>
+
+  <script>
+    function activateBot() {
+      alert("🤖 Le bot MANOLO est maintenant activé !");
+    }
+
+    function openConsole() {
+      alert("💻 Console ouverte (prochainement connectée au système du bot).");
+    }
+
+    function showDB() {
+      alert("📦 Connexion à la base de données en cours...");
+    }
+
+    function settings() {
+      alert("⚙️ Paramètres du bot à venir !");
+    }
+
+    function logout() {
+      if (confirm("Voulez-vous vraiment vous déconnecter ?")) {
+        window.location.href = "index.html";
+      }
+    }
+  </script>
+</body>
+</html>
